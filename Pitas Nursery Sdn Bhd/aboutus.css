@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+
+:root {
+  --primary: rgb(29, 152, 4);
+  --bg: rgb(4, 4, 123); /* Not used yet, but defined here */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--primary);
+  color: white;
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: white;
+  border-bottom: 1px solid #155bc4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  right: 0;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ensures full underline effect */
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1); /* Full underline on hover */
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+#menu {
+  display: none;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  90% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+/* About Us Section */
+#about-us {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  text-align: center; /* Center align the content */
+}
+
+#about-us h2 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto; /* Center the text block */
+  line-height: 1.8; /* Increase line height for readability */
+}
+
+/* Flexbox for the content area */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 20px; /* Add padding to the top of the content */
+}
+
+.about-image {
+  flex: 1;
+  max-width: 500px;
+  margin-bottom: 20px; /* Add margin below the image for spacing */
+  margin-left: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 2;
+  max-width: 600px;
+  text-align: left; /* Align text to the left */
+  margin: 0 auto; /* Center the text block */
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8; /* Increase line height for readability */
+}

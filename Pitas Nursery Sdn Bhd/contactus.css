@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+
+:root {
+  --primary: rgb(29, 152, 4);
+  --bg: rgb(4, 4, 123); /* Not used yet, but defined here */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--primary);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column; /* Added to stack elements vertically */
+  margin-top: 50px; /* To adjust for navbar fixed positioning */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: white;
+  border-bottom: 1px solid #155bc4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  right: 0;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ensures full underline effect */
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1); /* Full underline on hover */
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+#menu {
+  display: none;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  90% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100pxpx;
+  margin: 40px auto;
+  max-width: 1200px;
+  margin-left: 55px;
+}
+
+.form-section,
+.map-section {
+  width: 48%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: rgb(8, 49, 114);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0f0065;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #33b237;
+  color: var(--bg);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(4, 86, 39);
+}
+
+.map-section iframe {
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+h1 {
+  margin-left: -200px;
+}
+h2 {
+  margin-left: -180px;
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animate 10s ease-in-out infinite;
+  background-size: cover;
+}
+
+.outer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(/img/inti1.jpeg);
+  }
+  25% {
+    background-image: url(/img/pn3.jpeg);
+  }
+  50% {
+    background-image: url(/img/inti2.jpeg);
+  }
+  75% {
+    background-image: url(/img/pn4.jpeg);
+  }
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 300px;
+}
+.btn-box {
+  width: 100%;
+  max-width: 545px;
+  display: flex;
+  gap: 5em;
+  margin: 0 auto;
+  justify-content: center;
+}
+.btn-1,
+.btn-2 {
+  display: inline-flex;
+  padding: 5px 100px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Combined transitions for cleaner code */
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-1:hover {
+  background-color: rgb(4, 28, 101);
+  opacity: 80%;
+  color: white;
+}
+.btn-2:hover {
+  background-color: #0a9003;
+  opacity: 80%;
+  color: white;
+}

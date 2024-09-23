@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="workshop.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Intifokus Industries Sdn Bhd</title>
+  </head>
+
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+        <a href="/index.html" class="navbar-logo"
+          >INTIFOKUS INDUSTRIES <span> SDN BHD</a>
+  
+        <div class="navbar-nav">
+          <a href="home.html">HOME</a>
+          <a href="aboutus.html">ABOUT US</a>
+
+          <div class="dropdown-container">
+            <a href="#services" class="dropdown-trigger">SERVICES</a>
+            <ul class="dropdown">
+              <li><a href="conwork.html">Contract Work</a></li>
+              <li><a href="workshop.html">Workshop</a></li>
+              <li><a href="sparepart.html">Sparepart Supply</a></li>
+              <li><a href="rental.html"> Rental Machinary</a></li>
+            </ul>
+          </div>
+          <a href="contact.html">CONTACT US</a>
+        </div>
+  
+        <div class="navbar-extra">
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+    <!--Navbar end-->
+    <!--Contract Work start-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contract Work</title>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+  <h1>WORKSHOP</h1>
+  <hr>
+  
+  <h2>Our Company owned workshop that provide a lot of service.</h2>
+  
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('nature')"> Tyre</button>
+    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('people')"> Hydraulic hose</button>
+    <button class="btn" onclick="filterSelection('heavy')"> Heavy Machine repair</button>
+  </div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="/img/tyre2 (2).png" alt="Mountains" style="width:100%">
+      <h4>Supply New Tyre</h4>
+      <p>Our company supply new tyre </p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/img/tyre.jpeg" alt="Lights" style="width:100%">
+      <h4>Supply New Tyre</h4>
+      <p>Our company supply new tyre</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/img/tubetyre.png" alt="Lights" style="width:100%">
+      <h4>Supply New Tyre</h4>
+      <p>Our company supply new tyre</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="/img/carservice.JPG" alt="Car" style="width:100%">
+      <h4>Service Car</h4>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/img/alignment.png" alt="Car" style="width:100%">
+      <h4>Alignment</h4>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/img/balancing.png" alt="Car" style="width:100%">
+      <h4>Balancing</h4>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="/img/HYDR.png" alt="Car" style="width:100%">
+      <h4>Hydraulic Hose</h4>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/img/hydraulic-hoses.jpg" alt="Car" style="width:100%">
+      <h4>Hose</h4>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/img/hydraulic-fitting.jpg" alt="Car" style="width:100%">
+      <h4>Fitting</h4>
+    </div>
+  </div>
+
+  <div class="column heavy">
+    <div class="content">
+    <img src="/img/heavymachine (2).jpeg" alt="Car" style="width:100%">
+      <h4>Heavy Machine Repair</h4>
+    </div>
+  </div>
+  <div class="column heavy">
+    <div class="content">
+    <img src="/img/heavymachine (3).jpeg" alt="Car" style="width:100%">
+      <h4>Heavy Machine Repair</h4>
+    </div>
+  </div>
+  <div class="column heavy">
+    <div class="content">
+    <img src="/img/heavymachine.jpeg" alt="Car" style="width:100%">
+      <h4>Heavy Machine Repair</h4>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+  // Function to filter the selection based on category
+  function filterSelection(category) {
+    var elements = document.getElementsByClassName("column");
+    
+    // If the category is 'all', show all elements
+    if (category == "all") category = "";
+    
+    // Loop through all elements and hide or show them based on the category
+    for (var i = 0; i < elements.length; i++) {
+      if (elements[i].className.indexOf(category) > -1) {
+        elements[i].style.display = "block"; // Show matching elements
+      } else {
+        elements[i].style.display = "none";  // Hide non-matching elements
+      }
+    }
+  }
+  
+  // Add 'active' class to the current button
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active"; // Add the active class to the clicked button
+    });
+  }
+  </script>
+    
+</body>
+</html>

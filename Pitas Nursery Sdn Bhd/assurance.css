@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+
+:root {
+  --primary: rgb(29, 152, 4);
+  --bg: rgb(4, 4, 123); /* Not used yet, but defined here */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--primary);
+  color: white;
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: white;
+  border-bottom: 1px solid #155bc4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  right: 0;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ensures full underline effect */
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1); /* Full underline on hover */
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+#menu {
+  display: none;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  90% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+/* Vision and Mission Section */
+.vision-mission-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.vision-mission-title h2 {
+  font-size: 2.5rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.vision-mission-title p {
+  font-size: 1.2rem;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+/* Vision and Mission Cards */
+.vision-mission-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.vision-card,
+.mission-card {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 40%;
+  min-width: 300px;
+}
+
+.card-content {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Adds slight transparency to card content */
+}
+
+.card-content h3 {
+  font-size: 3rem;
+  color: #e74c3c; /* Number color */
+  margin-bottom: 0.5rem;
+}
+
+.card-content h4 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.vision-card img,
+.mission-card img {
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 50%;
+  object-fit: inherit;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .vision-card,
+  .mission-card {
+    width: 100%; /* Ensures the cards take up full width on smaller screens */
+  }
+}

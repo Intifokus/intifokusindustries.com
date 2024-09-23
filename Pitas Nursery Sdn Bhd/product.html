@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Pitas Nursery Sdn Bhd</title>
+  </head>
+
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+        <a href="/index.html" class="navbar-logo"
+          >PITAS NURSERY <span> SDN BHD</a>
+
+          <div class="navbar-nav">
+            <a href="/Pitas Nursery Sdn Bhd/aboutus.html">ABOUT US</a>
+            <a href="Visi.html">VISION & MISSION</a>
+            <a href="assurance.html">ASSURANCES</a>
+            <a href="licens.html">LICENSE & CERTIFICATE</a>
+            <a href="product.html">OUR PRODUCT</a>
+            <a href="service.html">OUR SERVICE</a>
+            <a href="contactus.html">CONTACT US</a>
+          </div>
+  
+        <div class="navbar-extra">
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+    <!--Navbar end-->
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 200px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 60%;
+  border-left: none;
+  height: 500px;
+  background-color: whitesmoke;
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<h2>OUR PRODUCT</h2>
+<p>Click on the buttons inside the tabbed menu for more information:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Sawit Kinabalu</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">FGV Yangambi</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Surea DxP</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+ 
+  #myImg, #myImg2 {
+    border-radius: 5px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+    
+  }
+  
+  #myImg:hover, #myImg2:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption, #caption2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 80px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  </style>
+  </head>
+  <body>
+  
+  
+  <!-- First Image -->
+  <img id="myImg" src="/img/pn/sawit kinabalu - Copy.PNG" alt="Sawit kinabalu" style="width:100%;max-width:300px">
+  
+  <!-- The Modal for First Image -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  
+  <!-- Second Image -->
+  <img id="myImg2" src="/img/pn/sawit kinabalu (2).PNG" alt="Sawit kinabalu" style="width:100%;max-width:300px; margin-top: 20px;">
+  
+  <!-- The Modal for Second Image -->
+  <div id="myModal2" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img02">
+    <div id="caption2"></div>
+  </div>
+  
+  <script>
+  // Function for handling image modal logic
+  function setupModal(imgId, modalId, modalImgId, captionId) {
+    var modal = document.getElementById(modalId);
+    var img = document.getElementById(imgId);
+    var modalImg = document.getElementById(modalImgId);
+    var captionText = document.getElementById(captionId);
+  
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  
+    var span = modal.getElementsByClassName("close")[0];
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  }
+  
+    // Set up both modals
+    setupModal('myImg', 'myModal', 'img01', 'caption');
+    setupModal('myImg2', 'myModal2', 'img02', 'caption2');
+  
+    </script>
+</div>
+
+
+
+<div id="Paris" class="tabcontent">
+  
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style> 
+
+  #yangambi1, #yangambi2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #yangambi1:hover, #yangambi2:hover {opacity: 0.7;}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* Caption of Modal Image */
+  #captionYangambi1, #captionYangambi2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-content, #captionYangambi1, #captionYangambi2 {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  </style>
+  </head>
+  <body>
+
+  <!-- First Image -->
+  <img id="yangambi1" src="/img/pn/yang ambi 3way.png" alt="Yangambi 3way" style="width:100%;max-width:300px">
+
+  <!-- The Modal for First Image -->
+  <div id="myModalYangambi1" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgYangambi1">
+    <div id="captionYangambi1"></div>
+  </div>
+
+  <!-- Second Image -->
+  <img id="yangambi2" src="/img/pn/yang ambi 3way1.png" alt="Yangambi ML161" style="width:100%;max-width:300px; margin-top: 20px;">
+
+  <!-- The Modal for Second Image -->
+  <div id="myModalYangambi2" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgYangambi2">
+    <div id="captionYangambi2"></div>
+  </div>
+
+  <script>
+  // Function for handling image modal logic
+  function setupModal(imgId, modalId, modalImgId, captionId) {
+    var modal = document.getElementById(modalId);
+    var img = document.getElementById(imgId);
+    var modalImg = document.getElementById(modalImgId);
+    var captionText = document.getElementById(captionId);
+
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    var span = modal.getElementsByClassName("close")[0];
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  }
+
+  // Set up both modals for Yangambi images
+  setupModal('yangambi1', 'myModalYangambi1', 'imgYangambi1', 'captionYangambi1');
+  setupModal('yangambi2', 'myModalYangambi2', 'imgYangambi2', 'captionYangambi2');
+
+  </script>
+
+  </body>
+  </html>
+
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    h2 {
+      margin-top: 10px;
+    }
+  </style>
+  </head>
+  <body>
+
+
+  <!-- Video --> 
+   <h2>Surea DxP </h2>
+   <p>Watch Video for more information about Surea DxP seeds.</p>
+  <video controls autoplay muted poster="poster_image.jpg">
+    <source src="/img/pn/Untitled design.mp4" type="video/mp4">
+    
+  </video>
+</div>
+
+
+
+  
+  
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html>
